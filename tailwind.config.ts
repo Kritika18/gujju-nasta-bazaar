@@ -52,6 +52,22 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// Custom Gujarati Nasta Brand Colors
+				saffron: {
+					DEFAULT: 'hsl(var(--saffron))',
+					light: 'hsl(var(--saffron-light))',
+					dark: 'hsl(var(--saffron-dark))'
+				},
+				terracotta: {
+					DEFAULT: 'hsl(var(--terracotta))',
+					light: 'hsl(var(--terracotta-light))'
+				},
+				gold: {
+					DEFAULT: 'hsl(var(--gold))',
+					light: 'hsl(var(--gold-light))'
+				},
+				maroon: 'hsl(var(--maroon))',
+				cream: 'hsl(var(--cream))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -67,6 +83,16 @@ export default {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
+			},
+			backgroundImage: {
+				'gradient-saffron': 'var(--gradient-saffron)',
+				'gradient-warm': 'var(--gradient-warm)',
+				'gradient-gold': 'var(--gradient-gold)'
+			},
+			boxShadow: {
+				'warm': 'var(--shadow-warm)',
+				'card': 'var(--shadow-card)',
+				'elegant': 'var(--shadow-elegant)'
 			},
 			keyframes: {
 				'accordion-down': {

@@ -2,39 +2,70 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+/* Traditional Gujarati Sukha Nasta Design System
+Authentic Indian colors inspired by saffron, turmeric, and traditional spices
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Traditional Indian Color Palette */
+    --background: 38 15% 97%;           /* Warm cream background */
+    --foreground: 25 35% 15%;           /* Deep brown text */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;                  /* Pure white cards */
+    --card-foreground: 25 35% 15%;      /* Deep brown text on cards */
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 25 35% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Saffron Orange - Primary Brand Color */
+    --primary: 28 90% 60%;              /* Rich saffron orange */
+    --primary-foreground: 0 0% 100%;    /* White text on saffron */
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Warm terracotta - Secondary */
+    --secondary: 15 65% 85%;            /* Light terracotta */
+    --secondary-foreground: 25 35% 15%; /* Deep brown text */
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted warm tones */
+    --muted: 38 25% 92%;                /* Very light warm beige */
+    --muted-foreground: 25 20% 45%;     /* Medium brown */
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Golden accent */
+    --accent: 45 85% 70%;               /* Golden yellow */
+    --accent-foreground: 25 35% 15%;    /* Deep brown text */
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Traditional red for alerts */
+    --destructive: 0 75% 55%;           /* Traditional Indian red */
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 38 15% 88%;               /* Subtle warm border */
+    --input: 38 15% 88%;                /* Input border */
+    --ring: 28 90% 60%;                 /* Saffron ring color */
+
+    /* Custom Design Tokens for Gujarati Nasta Website */
+    --saffron: 28 90% 60%;              /* Primary saffron */
+    --saffron-light: 28 85% 75%;        /* Light saffron */
+    --saffron-dark: 28 95% 45%;         /* Dark saffron */
+    
+    --terracotta: 15 75% 65%;           /* Rich terracotta */
+    --terracotta-light: 15 65% 85%;     /* Light terracotta */
+    
+    --gold: 45 85% 70%;                 /* Golden yellow */
+    --gold-light: 45 80% 85%;           /* Light gold */
+    
+    --maroon: 0 65% 35%;                /* Deep maroon */
+    --cream: 38 15% 97%;                /* Warm cream */
+    
+    /* Gradients */
+    --gradient-saffron: linear-gradient(135deg, hsl(var(--saffron)) 0%, hsl(var(--saffron-dark)) 100%);
+    --gradient-warm: linear-gradient(135deg, hsl(var(--saffron-light)) 0%, hsl(var(--terracotta-light)) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(var(--gold)) 0%, hsl(var(--saffron)) 100%);
+    
+    /* Shadows */
+    --shadow-warm: 0 4px 20px hsl(var(--saffron) / 0.15);
+    --shadow-card: 0 2px 10px hsl(var(--saffron) / 0.08);
+    --shadow-elegant: 0 8px 30px hsl(var(--saffron) / 0.12);
 
     --radius: 0.5rem;
 
@@ -56,33 +87,48 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark mode with warm Indian tones */
+    --background: 25 35% 8%;            /* Deep warm brown */
+    --foreground: 38 15% 95%;           /* Warm cream text */
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 25 30% 12%;                 /* Dark brown cards */
+    --card-foreground: 38 15% 95%;      /* Cream text on cards */
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 25 30% 12%;
+    --popover-foreground: 38 15% 95%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 28 85% 65%;              /* Bright saffron */
+    --primary-foreground: 25 35% 8%;    /* Dark brown text on saffron */
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 25 25% 20%;            /* Dark terracotta */
+    --secondary-foreground: 38 15% 95%; /* Cream text */
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 25 25% 18%;                /* Dark muted */
+    --muted-foreground: 38 10% 70%;     /* Light brown text */
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 45 80% 60%;               /* Darker gold */
+    --accent-foreground: 25 35% 8%;     /* Dark text */
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 70% 50%;           /* Bright red */
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 25 25% 20%;               /* Dark border */
+    --input: 25 25% 20%;                /* Dark input */
+    --ring: 28 85% 65%;                 /* Bright saffron ring */
+    
+    /* Updated custom tokens for dark mode */
+    --saffron: 28 85% 65%;
+    --saffron-light: 28 80% 75%;
+    --saffron-dark: 28 90% 55%;
+    
+    --terracotta: 15 65% 55%;
+    --terracotta-light: 15 55% 70%;
+    
+    --gold: 45 80% 60%;
+    --gold-light: 45 75% 75%;
+    
+    --maroon: 0 60% 40%;
+    --cream: 38 15% 95%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
